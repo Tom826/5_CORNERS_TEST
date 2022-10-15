@@ -20,7 +20,7 @@
             <button class="search__button" type="button">
               <span class="visually-hidden">Найти</span>
             </button>
-            <input class="search__input" type="text" name="search" placeholder="Поиск">
+            <input class="search__input" type="search" name="search" placeholder="Поиск">
           </div>
           <button class="header__wrapper-profile-button" type="button">
             <span class="visually-hidden">Открыть мой профиль</span>
@@ -57,9 +57,107 @@
         </nav>
       </header>
       <main class="main">
-        
+        <div class="main__bread-crumbs bread-crumbs">
+          <a class="bread-crumbs__link" href="#">Главная</a>
+          <a class="bread-crumbs__link" href="#">Корзина</a>
+        </div>
+        <section class="main__header">
+          <h1 class="main__header-title title">Корзина</h1>
+          <p class="main__header-profile profile">
+            <span class="profile__link-title">Есть аккаунт?</span>
+            <a class="profile__link" href="#">Войти</a>
+          </p>
+        </section>
+        <form class="main__form form" action="" method="get" name="basket-form">
+          <label class="form__label">
+            <span class="form__title">Адрес</span>
+            <input class="form__input" type="text" name="address" placeholder="г. Санкт-Петербург, пр. Просвещения, д. 99, кв. 152" >
+          </label>
+          <div class="form__location location">
+            <iframe class="location__image" src="https://yandex.ru/map-widget/v1/-/CCUR7GERLD" width="320" height="350" allowfullscreen title="Расположение Вашего адреса на карте"></iframe> <!--исправить место положение-->
+          </div>
+          <label class="form__label">
+            <input class="form__input" type="text" name="name" placeholder="Ваше Имя">
+          </label>
+          <label class="form__label">
+            <input class="form__input" type="tel" name="phone" placeholder="Ваш Телефон">
+          </label>
+          <label class="form__label">
+            <input class="form__input" type="email" name="email" placeholder="Ваш Email">
+          </label>
+          <select class="form__select" form="basket-form">
+            <option class="form__option" value="without">Тип упаковки</option>
+            <option class="form__option" value="without">Без упаковки</option>
+            <option class="form__option" value="standart">Стандартная</option>
+            <option class="form__option" value="gift">Подарочная</option>
+          </select>
+          <label class="form__label">
+            <input class="form__input" type="text" name="comment" placeholder="Введите комментарий">
+          </label>
+        </form>
+        <section class="main__products">
+          <h2 class="main__products-title title">Выбранные товары:</h2>
+          <div class="main__products-cards cards">
+            <section class="cards__content">
+              <img class="cards__content-image" src="">
+              <div class="cards__content-wrapper">
+                <h3 class="cards__content-title">Товар 1</h3>
+                <p class="cards__content-description">Описание товара, которое может быть длинным</p>
+                <div class="cards__content-counter counter">
+                  <button class ="counter__button" type="button"></button>
+                  <input class="conter__numbs" type="number" name="amount" placeholder="1">
+                  <button class ="counter__button" type="button"></button>
+                </div>
+                <div class="cards__content-price-wrapper">
+                  <span class="price">1090 руб.</span>
+                  <button class="delete" type="button">Удалить</button>
+                </div>
+              </div>
+            </section>
+            <section class="cards__content">
+              <img class="cards__content-image" src="">
+              <div class="cards__content-wrapper">
+                <h3 class="cards__content-title">Товар 2</h3>
+                <p class="cards__content-description">Описание товара, которое может быть длинным</p>
+                <div class="cards__content-counter counter">
+                  <button class ="counter__button" type="button"></button>
+                  <input class="conter__numbs" type="number" name="amount" placeholder="1">
+                  <button class ="counter__button" type="button"></button>
+                </div>
+                <div class="cards__content-price-wrapper">
+                  <span class="price">700 руб.</span>
+                  <button class="delete" type="button">Удалить</button>
+                </div>
+              </div>
+            </section>
+            <section class="cards__content">
+              <img class="cards__content-image" src="">
+              <div class="cards__content-wrapper">
+                <h3 class="cards__content-title">Товар 3</h3>
+                <p class="cards__content-description">Описание товара, которое может быть длинным</p>
+                <div class="cards__content-counter counter">
+                  <button class ="counter__button" type="button"></button>
+                  <input class="conter__numbs" type="number" name="amount" placeholder="1">
+                  <button class ="counter__button" type="button"></button>
+                </div>
+                <div class="cards__content-price-wrapper">
+                  <span class="price">2000 руб.</span>
+                  <button class="delete" type="button">Удалить</button>
+                </div>
+              </div>
+            </section>            
+          </div>
+        </section>
+        <div class="main__total total">
+          <span class="total__title">Итог:</span>
+          <span class="total__price">3790 руб.</span>
+        </div>
       </main>
-      <footer class="footer"></footer>
+      <footer class="footer">
+        <button class="footer__button button">
+          <span class="button__buy">Купить</span>
+        </button>
+      </footer>
     </div>
   </body>
 </html>
